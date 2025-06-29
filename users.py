@@ -10,7 +10,7 @@ blp=Blueprint('users', __name__,description='User related endpoints')
 class Login(MethodView):
     @blp.response(200,LoginSchema(many=True))
     def get(self):
-       return User.query.all()
+       pass
 
     @blp.arguments(LoginSchema)
     @blp.response(400, LoginSchema)
